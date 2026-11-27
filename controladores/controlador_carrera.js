@@ -19,7 +19,7 @@ async function registrarCarrera(req, res) {
     }
 }
 
-// Obtener todas las carreras
+
 async function obtenerCarreras(req, res) {
     try {
         const carreras = await servicioCarrera.obtenerCarreras();
@@ -37,7 +37,7 @@ async function obtenerCarreras(req, res) {
     }
 }
 
-// Obtener una carrera por su ID
+
 async function obtenerCarreraPorId(req, res) {
     try {
         const carrera = await servicioCarrera.obtenerCarreraPorId(req.params.id);
@@ -61,7 +61,7 @@ async function obtenerCarreraPorId(req, res) {
     }
 }
 
-// Actualizar una carrera
+
 async function actualizarCarrera(req, res) {
     try {
         const carrera = await servicioCarrera.actualizarCarrera(
@@ -88,7 +88,7 @@ async function actualizarCarrera(req, res) {
     }
 }
 
-// Desactivar una carrera
+
 async function eliminarCarrera(req, res) {
     try {
         const carrera = await servicioCarrera.eliminarCarrera(req.params.id);

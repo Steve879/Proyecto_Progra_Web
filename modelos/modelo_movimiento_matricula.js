@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-// Esquema para identificar quién realizó el movimiento
+// Esquema para identificar quién realizó el movimiento 
 const realizado_por_modelo = new mongoose.Schema({
     
     id: {
@@ -15,7 +15,7 @@ const realizado_por_modelo = new mongoose.Schema({
     }
     }, { _id: false });
 
-// Esquema principal de los movimientos de matrícula
+// y este es el esquema principal del modelo movimiento_matricula
 const movimiento_matricula_modelo = new mongoose.Schema({
     id: { 
         type: String, 

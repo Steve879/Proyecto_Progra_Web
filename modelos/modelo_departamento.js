@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const departamento_modelo = new mongoose.Schema({
@@ -5,20 +6,30 @@ const departamento_modelo = new mongoose.Schema({
     id: {
         type: String,
         required: true,
-  
+        trim: true
     },
     codigo: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true,
+        uppercase: true,
+        minlength: 2,
+        maxlength: 15
     },
     nombre: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
+        minlength: 3,
+        maxlength: 100
     },
     descripcion: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
+        minlength: 5,
+        maxlength: 500
     },
     estado: {
         type: String,
@@ -29,8 +40,8 @@ const departamento_modelo = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-
 });
 
 const Departamento = mongoose.model('Departamento', departamento_modelo, 'departamentos');
+
 module.exports = Departamento;
